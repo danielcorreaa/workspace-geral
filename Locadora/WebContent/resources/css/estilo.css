@@ -1,0 +1,230 @@
+
+
+body{
+    font-family:  GeosansLight, arial, sans-serif;
+    background:#F3F3F3;
+    padding: 0px;
+	margin: 0px;
+   
+}
+
+#topo{
+	height: 30px;
+	background-color: #0292C0;
+	color: #fff;
+
+	width: 100%;
+	padding: 5px;
+	box-shadow: 2px 2px #000;
+}
+.shadow5 { 
+  text-shadow: 15px 15px 12px -12px #9966CC; 
+}
+#conteudo{
+	width: 100%;
+}
+
+#menu{	
+	display:block;
+	margin-top: 10px; 
+	width: 100%;
+}
+.mn{
+	
+	width: 640px;;
+	margin: auto;
+	
+}
+ul li{
+	border: 1px solid black;
+	margin: auto;
+	
+}
+@font-face {
+  font-family: 'GeosansLight';
+  src: url('GeosansLight.eot?#iefix') format('embedded-opentype'),  url('GeosansLight.woff') format('woff'), url('GeosansLight.ttf')  format('truetype'), url('GeosansLight.svg#GeosansLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.GeosansLight{
+  font-family: 'GeosansLight';
+  
+}
+
+#corpo{
+	width: 100%;
+	border: 1px solid #fff;
+	margin-top: 80px;
+	
+}
+
+#formulario{  
+	margin: auto;
+	width: 400px;
+	margin-top:100px;
+	background-color: #0292C0;
+	padding: 30px;
+	box-shadow: 5px 5px #708090;
+	corlor:#fff !important;
+	
+ }
+ 
+#formulario input{
+	width: 400px;
+	height: 30px;
+}
+
+#formulario select{
+	width: 400px;
+	height: 30px;
+}
+#fundoTabela{	
+	margin: auto;
+	width: 80%;	
+}
+#tabLocacao{
+	
+	width 50%;
+	margin-left: 300px;
+	
+
+}
+table{
+    width: 100%;
+    text-align: center;
+}
+
+thead tr{
+	border: 1px solid black;	
+	background-color: #0292C0;
+	color: #fff;
+	padding: 15px;
+	font-weight: bold;
+}
+thead tr td{
+	
+	padding: 10px;
+}
+tbody tr{
+	
+	font-weight: bold;
+}
+tbody tr td{
+	padding: 5px;
+}
+
+#rodape{
+	padding-top:20px;
+	text-align: center;
+}
+
+.imagem{
+	width: 157px;
+    height: 57px;	
+	background: url(../img/enviar.png);
+    overflow: hidden;
+	
+}
+.imagem input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    cursor: pointer;
+}
+#poster{
+	width: 150px;
+	height: 200px;
+	padding:2px;
+	border: 1px solid gray;
+	margin: auto;
+	display: none;
+	
+}
+
+#formDev{
+	display: block;
+	
+}
+
+#selecionarCor{
+	width: 100px;
+	height: 20px;
+}
+
+#pesquisa{
+	margin: auto;
+	width: 80%;
+	margin-top:80px;
+	background-color: #0292C0;
+	padding: 30px;
+	box-shadow: 5px 5px #708090;
+	corlor:#fff !important;
+}
+.btmPesquisar{	
+	width: 50px !important; 
+	height: 35px !important;
+	opacity: 0 !important;
+	overflow: hidden !important;
+	cursor: pointer;
+	background: url(../img/lupa.png);
+}
+
+#lupa{
+	
+	 
+	padding: 2px;
+	background-color: #fff;
+	margin-left: 403px;
+	width: 35px;
+	border-radius: 0px 5px 5px 0px;
+}
+
+#lupa a{
+	height: 35px; 
+	
+}
+
+.imgFil{
+	width: 150px; 
+	height: 200px; 
+	float: left;
+	border: 1px solid #fff;
+	padding: 2px;
+	background-color: #fff;
+}
+.clear{
+	clear: both;
+}
+.desc{
+	color: #fff;
+	margin-left: 200px;
+	margin-top: -20px;
+}
+
+#overlay {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+     
+}
+
+#overlay div {
+     width:270px;
+     margin-top: 20px;
+     margin-left: 75%;
+     background-color: #fff;
+     border:1px solid #000;
+     padding:5px;
+     text-align:center;
+     background-color:#98FB98;
+     border-radius: 5px 5px;
+     		
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ex 2</title>
+<script type="text/javascript">
+	
+	window.onload = function(){ //executa quando o documento for carregado
+		//localiza todas as marcas <img> no documento
+		var images = document.getElementsByTagName("img");
+		for(var i = 0; i < images.length;i++){
+			var image = images[i];
+			if(image.addEventListener) //Outro modo de registrar uma rotina de tratamento
+				image.addEventListener("click", hide , false);
+			else
+				image.addEventListener("onclick", hide);
+		}
+		
+		function hide(event) { event.target.style.visibility = "hidden";}
+	};
+	
+	function debug(msg){
+		var log = ${"#debuglog"};
+		if(log.length == 0){
+			log = $("div id='debuglog'> <h1> Debug Log </h1> </div>");
+			log.appendTo(document.body);
+		}
+		log.append($("<pre/>").text(msg));
+	}
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

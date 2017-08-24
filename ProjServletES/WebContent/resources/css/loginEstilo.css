@@ -1,0 +1,65 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	background-color: #FFFAF0;
+	font-family:  GeosansLight, arial, sans-serif;	
+}
+
+#loginCont{
+	margin:auto;
+	width:25%;
+	border: 1px solid black;
+	
+	border-radius: 5px 5px 5px 5px;
+	background-color: #DEB887;
+}
+#cabecalho{
+	border: 1px solid black;
+	padding: 5px;
+	text-align: center;
+	border-radius: 5px 5px 0px 0px;
+	background-color: #8B4513;
+	color:#fff;
+	box-shadow: 0px 1px black;
+}
+
+form{
+	text-align: center;
+	padding: 5px;
+}
+input{
+	text-align: center;
+	width: 250px;
+	height: 30px;
+}
+
+
+
+.espaco5{height: 5px;}
+.espaco10{height: 10px;}
+.espaco15{height: 15px;}
+.espaco20{height: 20px;}
+.espaco25{height: 25px;}
+.espaco30{height: 30px;}
+@font-face {
+  font-family: 'GeosansLight';
+  src: url('../font/GeosansLight.eot?#iefix') format('embedded-opentype'),  url('../font/GeosansLight.woff') format('woff'), url('../font/GeosansLight.ttf')  format('truetype'), url('../font/GeosansLight.svg#GeosansLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.GeosansLight{
+  font-family: 'GeosansLight';
+  
+}
+
+#resposta{
+	text-align: center;
+	font-family: 15px;
+	padding: 10px;
+	background-color: #FFE4E1;
+	color: red;
+}
+
+

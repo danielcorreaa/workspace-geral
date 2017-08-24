@@ -1,0 +1,75 @@
+html{
+   
+}	
+
+body{
+   margin:0px;
+   padding:0px;	
+   width: 100%;
+
+}
+
+#header{
+   height: 40px;
+   background-color: #484848;
+   color: #fff;   
+
+}
+
+#header h3{
+   color: white;
+   padding:5px;
+}
+
+.espaco10{
+  height: 10px;	
+} 
+ .espaco20{
+  height: 20px;	
+ }
+ .espaco30{
+  height: 30px;	
+ }
+ 
+#formulario{
+   margin: auto;
+   width: 500px;
+  
+ }
+ 
+#formulario input{
+	width: 400px;
+	height: 30px;
+  }
+  
+#tabela{
+    margin: auto;
+    width: 500px;
+}
+ 
+
+
+table thead th, table thead td{
+   width: 300px;
+   text-align: center;
+   background-color: #F5F5F5;
+   min-width: 60px;
+   max-width: 170px;
+}
+table tbody th, table tbody td{
+	background-color: #DCDCDC;
+	border: 1px solid #484848;
+	
+}
+.fundomensagem{
+	margin: auto;
+	background-color: #8FBC8F;
+	
+}
+.mensagem{
+	color: #fff;
+	text-align:center;
+	padding: 10px;
+	
+}
+		

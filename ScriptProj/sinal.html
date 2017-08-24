@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sinal</title>
+<style type="text/css">
+	body{
+		padding: 0px;
+		margin: 0px;
+		width: 100%;
+	}
+	
+	#conteudo{
+		width: 800px;
+		height: 100%;
+		position: fixed;
+		background-color: #f3f3f3;
+		
+	}
+	#sinal{
+		width: 20px;
+		height: 100%;
+		position: fixed;
+		background-color: #000;
+		
+	}
+	#caixa{
+		width: 100px;
+		height: 40%;
+		position: fixed;
+		background-color: grey;
+		margin-left: 20px;
+		
+		
+	}
+	
+	#verde{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: #CDFBD5;
+		margin: auto;
+		margin-top: 40px;
+	}
+	
+	#amarelo{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: #FCFBD6;
+		margin: auto;
+	}
+	
+	#vermelho{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: #FCDEE6;
+		margin: auto;
+	}
+	#tempo{
+		width: 200px;
+		height: 200px;
+		float: right;
+		border: 2px solid #000;
+		border-radius: 10px;
+		margin-right: 20px;
+		margin-top: 20px;
+		background-color: #0E66E1;
+		text-align: center;
+		color: #fff;
+		font-size: 100px;
+	    
+	}
+	
+	#transito{
+		top: 300px;
+		left: 200px;
+		position: fixed;
+	}
+</style>
+
+<script type="text/javascript">
+	var i = 10;
+	var y = 30;
+	function temporizador(){		
+		var tempo = document.getElementById("tempo");
+		
+		
+		if(i==0){
+			i = 10;			
+		}
+		if(y == 0){
+			y = 30;
+		}
+		
+		if(y == 20){
+			document.getElementById("verde").style.backgroundColor = "#CDFBD5";
+			document.getElementById("amarelo").style.backgroundColor = "#FFFF00";
+			document.getElementById("car").src = "img/carP.png";
+		}else if( y == 10){
+			document.getElementById("amarelo").style.backgroundColor = "#FCFBD6";
+			document.getElementById("vermelho").style.backgroundColor = "#FF0000";
+			document.getElementById("car").src = "img/carP.png";
+		}else if(y == 0 || y == 30){
+			document.getElementById("vermelho").style.backgroundColor = "#FCDEE6";
+			document.getElementById("verde").style.backgroundColor = "#00FF00";
+			document.getElementById("car").src = "img/car.gif";
+		}
+		
+		tempo.innerHTML = i;
+		i--;
+		y--
+		setTimeout(temporizador, 1000);
+		
+	}
+	
+	window.onload = temporizador;
+
+</script>
+
+</head>
+<body>
+
+	<div id="conteudo">
+	
+		<div id="sinal">
+		
+		</div>
+		<div id="caixa">
+			<div id="verde">
+			
+			</div>
+			<div style="height: 10px;"></div>	
+			<div id="amarelo">
+			
+			</div>
+			<div style="height: 10px;"></div>	
+			<div id="vermelho">
+			
+			</div>
+		
+		</div>
+		
+		<div id="tempo"></div>
+		
+		<div id="transito">
+		
+			<img id="car" alt="carro" >
+			
+		</div>
+		
+	</div>
+
+</body>
+</html>

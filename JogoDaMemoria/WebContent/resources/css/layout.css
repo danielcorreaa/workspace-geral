@@ -1,0 +1,39 @@
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: #4682B4;
+}
+
+header h1{
+	
+}
+
+section{
+ 	width: 100%;	
+}
+
+article{
+	width: 80%;
+	
+	height: 500px;	
+	margin: auto;
+}
+
+@font-face {
+    font-family: 'Kraash';
+    src: url('fonts/Kraash.eot');
+    src: url('fonts/Kraash.eot') format('embedded-opentype'),
+         url('fonts/Kraash.woff2') format('woff2'),
+         url('fonts/Kraash.woff') format('woff'),
+         url('fonts/Kraash.ttf') format('truetype'),
+         url('fonts/Kraash.svg#Kraash') format('svg');
+}
+
+
+
+.Segoe{
+	font-family: 'Segoe Script';
+	font-size: 60px;
+	text-align: center;
+	color: #ffb74d;
+}

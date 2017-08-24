@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+    
+     <h:head>       
+        <title>PrimeFaces Ronin</title>        
+     </h:head>
+     
+     <h:body>
+        
+        <h:form id="mainForm" prependId="false"> 
+             
+            <p:layout fullPage="true"> 
+                       
+                <p:layoutUnit  position="west" resizable="true" size="200"  minSize="40"
+                    maxSize="200" header="Menu">
+                       
+                </p:layoutUnit>        
+        
+                <p:layoutUnit  position="center" header="Conteudo" >
+                    <ui:insert name="conteudo">Conteudo</ui:insert>
+                </p:layoutUnit>
+                                    
+            </p:layout>
+             
+        </h:form>                 
+     
+     </h:body>
+    
+    
+</html>    

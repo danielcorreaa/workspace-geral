@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Relogio Digital</title>
+
+<script type="text/javascript">
+
+	function mostrarHora(){
+		var tempo = document.getElementById("clock");
+		var agora = new Date();
+		tempo.innerHTML = agora.toLocaleTimeString();
+		if(agora.toLocaleTimeString() == "12:34:00"){
+			alert("despertar");
+		}
+		setTimeout(mostrarHora, 1000);
+	}
+	
+	window.onload = mostrarHora;
+
+</script>
+<style type="text/css">
+
+#clock{
+	font: bold 24pt sans;
+	background: #ddf;
+	padding: 10px;
+	border: solid black 2px;
+	border-radius: 10px;
+}
+
+</style>
+</head>
+<body>
+	<h1>Relogio Digital</h1>
+	<span id="clock"></span>
+</body>
+</html>

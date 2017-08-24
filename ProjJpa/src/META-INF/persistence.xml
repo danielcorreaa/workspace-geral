@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+    
+    <persistence-unit name="JPA_EFICAZ_HIBERNATE" transaction-type="RESOURCE_LOCAL">
+    	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+    	
+    	<class>com.jpa.eficaz.model.Musica</class>
+    	
+    	<exclude-unlisted-classes>
+    	  true
+    	</exclude-unlisted-classes>
+        <properties>
+        
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/locadora" />
+			<property name="hibernate.connection.user" value="root" />
+			<property name="hibernate.connection.password" value="" />
+        
+        </properties> 
+    
+    </persistence-unit>
+    <persistence-unit name="PERSISTENCE_JTA" transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:comp/env/jdbc/sgiDS</jta-data-source>
+	</persistence-unit>
+</persistence>

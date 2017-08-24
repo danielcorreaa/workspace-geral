@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:composition  template="template/template.xhtml">
+		
+		<ui:define name="conteudo">
+		 <h:form>
+		 	<p:growl id="growl" showDetail="true" /> 
+			<h:panelGroup rendered="#{estabelecimentoControle.editando}">
+					
+					<div align="center">
+						<div style="height: 100px;"></div>
+						<p:panelGrid columns="2">
+							<f:facet name="header">
+								Cadastro de Estabelecimento
+							</f:facet>
+							
+							<p:outputLabel value="Nome Estabelecimento" for="nome"/>
+							<p:inputText id="nome" size="40" value="#{estabelecimentoControle.estabelecimento.nomeEstabelecimento}" required="true" requiredMessage="Campo nome é necessário"/>
+							
+							<f:facet name="footer">
+							
+								<p:commandButton value="Salvar" update="@form" actionListener="#{estabelecimentoControle.salvar}" icon="fa fa-save Fs18 white" styleClass="GreenButton"/>
+								<p:commandButton value="Voltar" update="@form" actionListener="#{estabelecimentoControle.voltar}" style="float:right" icon="fa fa-reply Fs18 white" styleClass="RedButton" immediate="true"/>
+								
+							</f:facet>	
+						</p:panelGrid>
+						
+					</div>
+					
+			</h:panelGroup>
+			<div class="tabelaMargem">
+				<h:panelGroup rendered="#{!estabelecimentoControle.editando}">
+				
+					<div style="height: 20px;"></div>
+					
+					<p:dataTable var="estabele" value="#{estabelecimentoControle.estabelecimentos}" paginatorPosition="top" paginator="true" rows="10">
+						
+						<f:facet name="header">
+							<p:commandButton value="Novo" icon="fa fa-plus Fs18 white" styleClass="BlueButton" update="@form" action="#{estabelecimentoControle.novo}"/>
+						</f:facet>
+						
+						<p:column headerText="Nome">
+							<h:outputText value="#{estabele.nomeEstabelecimento}"/>
+						</p:column>
+						
+						<p:column width="6%">
+							<p:commandButton icon="fa fa-edit Fs18 white" update="@form" title="Editar">
+								<f:setPropertyActionListener value="#{estabele}" target="#{estabelecimentoControle.estabelecimento}"/>
+								<f:setPropertyActionListener value="true" target="#{estabelecimentoControle.editando}"/>
+							</p:commandButton>
+						</p:column>
+						
+						<p:column width="6%">
+							<p:commandButton icon="fa fa-trash Fs18 white" title="Excluir" update="@form" process="@this" actionListener="#{estabelecimentoControle.excluir(estabele)}">							  
+							   <p:confirm header="Confirmação" message="Tem Certeza que deseja excluir?" icon="ui-icon-alert" />								
+							</p:commandButton>
+						</p:column>					
+					
+					</p:dataTable>
+					
+				</h:panelGroup>
+			</div>
+			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+		        <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+		        <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+   			 </p:confirmDialog>
+		  </h:form>
+		</ui:define>
+	
+	</ui:composition>
+
+</html>

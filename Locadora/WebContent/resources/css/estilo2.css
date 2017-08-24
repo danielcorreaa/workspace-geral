@@ -1,0 +1,171 @@
+body{
+	padding: 0px;
+	margin: 0px;
+	font-family: GeosansLight !important;, arial;
+	background-color: rgb(246,241,212);
+}
+
+#conteudo{
+	width: 100%;
+	
+}
+
+#topo{
+	height: 30px;
+	background-color: rgb(055,071,079);
+	color: #fff;
+	position: fixed;
+	width: 100%;
+	padding: 5px;
+}
+
+#menu{
+	width: 15%;
+	position: fixed;
+	height: 100%;
+	background-color: #708090;
+	margin-top: 40px;
+	box-shadow: 2px 2px 2px 2px #696969;
+	}
+#fundMenu{
+	margin-top: 30px;
+	
+}	
+	
+.link{
+	
+	text-align: center;
+	
+}
+
+.link, a{
+	text-decoration: none;
+	color: #fff;
+	padding: 15px;
+}
+
+.link:HOVER{
+	background-color: rgb(055,071,079);
+}
+
+
+#corpo{
+	width: 77%;
+	height:90%;	
+	left:300px;
+	margin-top: 50px;
+	position: fixed;
+	overflow: auto;
+}
+
+#rodape{	
+	
+		
+}
+
+.espaco10{
+	height: 10px;
+}
+.espaco20{
+	height: 20px;
+}
+.espaco30{
+	height: 30px;
+}
+#formulario{
+   display: none;
+	margin: auto;
+	width: 40%;
+ }
+ 
+#formulario input{
+	width: 400px;
+	height: 30px;
+  }
+  
+  
+@font-face {
+    font-family: GeosansLight;
+    src: url("font/GeosansLight.ttf") format('truetype');
+}
+
+.GeosansLight{
+	font-family: GeosansLight;
+	font-size: 30px;
+}
+
+.fundoTabela{	
+	display: block;
+	width: 80%;	
+}
+#tabLocacao{
+	
+	width 50%;
+	margin-left: 300px;
+	
+
+}
+table{
+
+}
+
+thead tr{
+	border: 1px solid black;	
+	background-color:#1E90FF;
+	color: #fff;
+	padding: 15px;
+	font-weight: bold;
+}
+thead tr td{
+	
+	padding: 10px;
+}
+tbody tr{
+	background-color: #B0C4DE;
+	font-weight: bold;
+}
+tbody tr td{
+	padding: 5px;
+}
+
+
+.internoTab{	
+	width: 80%;
+	margin: auto;
+}
+.internoTab, table{
+	text-align: center;
+	width: 100%;
+}
+
+
+ 
+#locacao{	
+	width: 250px;
+	float: left;
+}
+
+  
+
+
+
+@font-face {
+  font-family: 'GeosansLight';
+  src: url('GeosansLight.eot?#iefix') format('embedded-opentype'),  url('GeosansLight.woff') format('woff'), url('GeosansLight.ttf')  format('truetype'), url('GeosansLight.svg#GeosansLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.GeosansLight{
+  font-family: 'GeosansLight';
+}
+
+h3{
+	text-shadow: 1px 1px black ;
+	color: #696969;
+	
+}
+
+.label{
+	font-size: 12px;
+}

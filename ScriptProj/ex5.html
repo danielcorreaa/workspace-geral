@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	
+		function exibirCores(){
+			
+			var op;
+			
+		}
+		
+		function msg() {
+			
+			setTimeout(function(){ 
+				
+				document.getElementById("azul").style.backgroundColor = "#00FF00";
+				
+			}, 3000);
+			
+			
+			setTimeout(function(){ 
+				
+				document.getElementById("verde").style.backgroundColor = "green";
+				
+			}, 6000);
+			
+			setTimeout(function(){ 
+				
+				document.getElementById("amarelo").style.backgroundColor = "yellow";
+				
+			}, 9000);
+			
+			setTimeout(function(){ 
+				
+				document.getElementById("vermelho").style.backgroundColor = "red";
+				
+			}, 12000);
+		}
+	
+	</script>
+</head>
+<body>
+	
+	<input type="button" onclick="msg();" value="MSG">
+	<div id="azul" style="width: 100px; height: 100px;">
+	</div>
+	
+	<div id="verde" style="width: 100px; height: 100px;">
+	</div>
+	
+	<div id="amarelo" style="width: 100px; height: 100px;">
+	</div>
+	
+	<div id="vermelho" style="width: 100px; height: 100px;">
+	</div>
+</body>
+</html>

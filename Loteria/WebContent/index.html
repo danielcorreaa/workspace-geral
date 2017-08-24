@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="js/sorteio.js"></script>
+
+<meta charset="ISO-8859-1">
+<title>Sorteio</title>
+<style type="text/css">
+body{
+	width: 100%;
+	background-color: #FFEBCD;
+	font-family: arial;
+}
+#conteudo{
+	width: 1212px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.quadro{
+	width: 200px;
+	height: 300px;
+	border: 1px solid black;	
+	background-color: #fff;
+	vertical-align: middle;
+	display: table-cell;
+	text-align: center;
+	font-size: 150px;
+}
+
+#botao{
+	text-align:center;	
+}
+
+#btmSortear{
+	width: 200px;
+	height: 30px;
+	background-color: #DEB887;
+	border: 1px solid #fff;
+	color: #000;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#escolher{
+	width: 1212px;
+	margin: auto;
+	
+}
+.campo{
+	width: 50px;
+}
+</style>
+
+</head>
+
+<body>
+	<div id="escolher">
+		<h2>Escolhar os Numeros</h2>
+		<input type="text" class="campo" id="campo1"/>
+		<input type="text" class="campo" id="campo2"/>
+		<input type="text" class="campo" id="campo3"/>
+		<input type="text" class="campo" id="campo4"/>
+		<input type="text" class="campo" id="campo5"/>
+		<input type="text" class="campo" id="campo6"/>
+	</div>
+	<div id="conteudo">
+		
+		<div class="quadro">
+			<div class="numero" id="numero1">0</div>
+		</div>		
+		
+		<div class="quadro">
+			<div class="numero" id="numero2">0</div>
+		</div>
+		
+		<div class="quadro">
+			<div class="numero" id="numero3">0</div>
+		</div>
+		
+		<div class="quadro">
+			<div class="numero" id="numero4">0</div>
+		</div>
+		
+		<div class="quadro">
+			<div class="numero" id="numero5">0</div>
+		</div>
+		
+		<div class="quadro">
+			<div class="numero" id="numero6">0</div>
+		</div>
+		<div style="height: 50px;"></div>
+		
+		<div id="botao">
+			<input type="button" value="Sortear" id="btmSortear" onclick="sortear();"/>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

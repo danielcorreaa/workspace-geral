@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>ControleCartao</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  		<servlet-name>EstabelecimentoController</servlet-name>
+  		<servlet-class>com.controle.controller.EstabelecimentoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	    <servlet-name>EstabelecimentoController</servlet-name>
+  	    <url-pattern>/estabelecimento.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  		<servlet-name>ProdutoController</servlet-name>
+  		<servlet-class>com.controle.controller.ProdutoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	    <servlet-name>ProdutoController</servlet-name>
+  	    <url-pattern>/produto.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  		<servlet-name>CompraController</servlet-name>
+  		<servlet-class>com.controle.controller.CompraController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	    <servlet-name>CompraController</servlet-name>
+  	    <url-pattern>/compra.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  		<servlet-name>UsuarioController</servlet-name>
+  		<servlet-class>com.controle.controller.UsuarioController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	    <servlet-name>UsuarioController</servlet-name>
+  	    <url-pattern>/usuario</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  		<servlet-name>LoginController</servlet-name>
+  		<servlet-class>com.controle.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	    <servlet-name>LoginController</servlet-name>
+  	    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  		<servlet-name>HomeController</servlet-name>
+  		<servlet-class>com.controle.controller.HomeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	    <servlet-name>HomeController</servlet-name>
+  	    <url-pattern>/home.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  		<servlet-name>LogoutController</servlet-name>
+  		<servlet-class>com.controle.controller.LogoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	    <servlet-name>LogoutController</servlet-name>
+  	    <url-pattern>/logout.do</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	   <filter-name>FiltroConexao</filter-name>
+  	   <filter-class>com.controle.filtro.FiltroConexao</filter-class>
+  </filter>
+  <filter-mapping>
+  		<filter-name>FiltroConexao</filter-name>
+  		<url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+  		<servlet-name>CartaoController</servlet-name>
+  		<servlet-class>com.controle.controller.CartaoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	    <servlet-name>CartaoController</servlet-name>
+  	    <url-pattern>/cartao.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  		<servlet-name>AutoCompleteController</servlet-name>
+  		<servlet-class>com.controle.controller.AutoCompleteController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	    <servlet-name>AutoCompleteController</servlet-name>
+  	    <url-pattern>/complete</url-pattern>
+  </servlet-mapping>
+  
+  <session-config>
+        <session-timeout>30</session-timeout>
+  </session-config>
+  
+</web-app>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition  template="../template/template.xhtml">
+	
+	<ui:define name="conteudo">
+		 <h:form>
+		 	<p:growl id="growl" showDetail="true" /> 
+			<h:panelGroup rendered="#{produtoControle.editando}">
+					
+					<div align="center">
+						<div style="height: 100px;"></div>
+						<p:panelGrid columns="2">
+							<f:facet name="header">
+								Cadastro de Produto
+							</f:facet>
+							
+							<p:outputLabel value="Nome Produto" for="nome"/>
+							<p:inputText id="nome" value="#{produtoControle.produto.nomeProd}" required="true" requiredMessage="Campo nome é necessário" size="40"/>
+							
+							<p:outputLabel value="Preço Produto" for="preco"/>
+							<p:inputText id="preco" value="#{produtoControle.produto.preco}" required="true" requiredMessage="Campo preço é necessário" size="40"/>
+							
+							<f:facet name="footer">
+							
+								<p:commandButton value="Salvar" update="@form" actionListener="#{produtoControle.salvar}" styleClass="GreenButton" icon="fa fa-save Fs18 white"/>
+								<p:commandButton value="Voltar" update="@form" actionListener="#{produtoControle.voltar}" styleClass="RedButton" style="float:right" icon="fa fa-reply Fs18 white" immediate="true"/>
+								
+							</f:facet>	
+						</p:panelGrid>
+						
+					</div>
+					
+			</h:panelGroup>
+			<div class="tabelaMargem">
+				<h:panelGroup rendered="#{!produtoControle.editando}">
+				
+					<div style="height: 20px;"></div>
+					
+					<p:dataTable var="produto" value="#{produtoControle.produtos}" paginatorPosition="top" paginator="true" rows="10">
+						
+						<f:facet name="header">
+							<p:commandButton value="Novo" icon="fa fa-plus Fs18 white" styleClass="BlueButton" update="@form" action="#{produtoControle.novo}"/>
+						</f:facet>
+						
+						<p:column headerText="Nome">
+							<h:outputText value="#{produto.nomeProd}"/>
+						</p:column>
+						
+						<p:column headerText="Nome">
+							<h:outputText value="#{produto.preco}">
+								<f:convertNumber type="currency" />
+							</h:outputText>
+						</p:column>
+						
+						<p:column width="5%">
+							<p:commandButton icon="fa fa-edit Fs18 white" update="@form" title="Editar">
+								<f:setPropertyActionListener value="#{produto}" target="#{produtoControle.produto}"/>
+								<f:setPropertyActionListener value="true" target="#{produtoControle.editando}"/>
+							</p:commandButton>
+						</p:column>
+						
+						<p:column width="5%">
+							<p:commandButton icon="fa fa-trash Fs18 white" title="Excluir" update="@form" process="@this" actionListener="#{produtoControle.excluir(produto)}">							  
+							   <p:confirm header="Confirmação" message="Tem Certeza que deseja excluir?" icon="ui-icon-alert" />								
+							</p:commandButton>
+						</p:column>					
+					
+					</p:dataTable>
+					
+				</h:panelGroup>
+			</div>
+			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+		        <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+		        <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+   			 </p:confirmDialog>
+		  </h:form>
+		</ui:define>
+	
+	</ui:composition>
+
+</html>

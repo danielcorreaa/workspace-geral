@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Nave</title>
+	<style type="text/css">
+	
+		canvas{
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+		}
+		
+		
+	</style>
+</head>
+<body>
+
+	<script>
+		
+		var canvas, LARGURA, ALTURA,
+		
+		nave = {
+			y: 400,
+			x: 250,
+			
+			desenha:function(){
+				var nave = document.createElement("img");
+				nave.src = "lib/img/nave.gif";
+				
+				nave.style.transform = "rotate(60deg)";
+				
+				canvas.appendChild(nave);				
+				ctx.drawImage(nave, this.x, this.y, 106, 71);
+			}
+		};
+	
+		function main(){
+			
+			LARGURA = window.innerWidth;
+			
+			ALTURA = window.innerHeight;
+			
+			if(LARGURA > 600){
+				LARGURA = 600;
+				ALTURA = 600;
+			}
+			
+			canvas = document.createElement("canvas");
+			
+			canvas.width = LARGURA;
+			canvas.height = ALTURA;
+			canvas.style.border = "1px solid #000";
+			
+			ctx = canvas.getContext("2d");							
+			document.body.appendChild(canvas);	
+			
+			roda();
+		}
+		
+		function roda(){
+			
+			desenha();
+			window.requestAnimationFrame(roda);
+			
+		}
+		
+		function desenha(){
+			var img = document.createElement("img");
+			img.src = "lib/img/space.jpg";
+			canvas.appendChild(img);
+			ctx.drawImage(img, 0, 0, 600, 600);
+			
+			nave.desenha();
+		}
+		
+		main();
+	
+	
+	</script>
+
+</body>
+</html>

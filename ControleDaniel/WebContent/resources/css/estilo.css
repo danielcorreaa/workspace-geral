@@ -1,0 +1,163 @@
+body{
+	background-color: #f7f5f3;
+}
+
+a{
+	  	cursor: pointer;
+	  	color: black;
+}
+.pg-normal {
+		color:  #039be5;
+		font-weight: normal;
+		text-decoration: none;
+		cursor: pointer;
+}	
+.pg-selected {
+		color:  #039be5;
+		font-weight: bold;
+		text-decoration: underline;
+		cursor: pointer;
+}
+
+#msg {
+	width: 360px;
+	position: relative;
+	margin: 0 auto 20px auto;
+	padding: 15px 15px;
+	text-align: left;
+	border-radius: 5px;
+    box-shadow: 
+		0 1px 1px rgba(0,0,0,0.1), 
+		inset 0 1px 0 rgba(255,255,255,0.6);  
+	opacity: 0;
+	cursor: default;	
+	position: absolute;
+    z-index: 9999;  
+    margin-top: -650px;
+    margin-left: 70%;
+    text-align: center;
+    font-weight: bold;   
+}
+
+.tn-box-color-1{
+	background: #ffe691;
+	border: 1px solid #f6db7b;
+}
+
+.tn-box-color-2{
+	background: #99ffb1;
+	border: 1px solid #7ce294;
+}
+
+
+@keyframes fadeOut {
+	0% 	{ opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; transform: translateY(0px);}
+	99% { opacity: 0; transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+@keyframes runProgress {
+	0%	{ width: 0%; background: rgba(255,255,255,0.3); }
+	100% { width: 96%; background: rgba(255,255,255,1); }
+}
+
+#fundo{	
+	
+}
+#esquerdo{
+	margin-left: 50px;	
+	min-height: 400px;
+	overflow: auto;
+	color: #d81b60;	
+	background-color: #ffd54f;
+	width: 250px;
+	border-right: 1px solid #000000 !important;	
+	float: left;
+}
+
+#direito{
+	min-height: 400px;
+	background-color: #ffff8d;
+	border-right: 1px solid black;
+	width: 70%;
+	margin-left: 350px;
+	background-color: #4fc3f7;
+	overflow-x: hidden !important;
+	overflow: auto;
+}
+.clear{
+	clear: both;
+}
+.card .card-title {
+	color: #039be5 !important;
+	font-weight: bold !important;
+}
+
+.novoCadastro {
+	color:#fff !important;
+	padding: 10px;
+	background-color: #0288d1;
+	border-radius: 2px;
+	box-shadow: 2px 2px #000;
+	font-size: 10px;
+}
+.novoCadastro:hover{	
+	padding: 15px;	
+	box-shadow: 4px 4px #000;
+}
+
+.btmSalvar{
+	color:#fff !important;
+	padding: 10px;
+	background-color: #66BB6A;
+	border-radius: 2px;
+	box-shadow: 2px 2px #000;
+	font-size: 10px;
+	transition: 1s;
+	
+}
+.btmSalvar:hover{		
+	box-shadow: 4px 4px #000;
+	
+}	
+.btmVoltar{
+	color:#fff !important;
+	padding: 10px;
+	background-color: #E53935;
+	border-radius: 2px;
+	box-shadow: 2px 2px #000;
+	font-size: 10px;
+	
+}
+
+.btmVoltar:hover{	
+	box-shadow: 4px 4px #000;
+}
+
+.btmAcessar{
+	color:#fff !important;
+	padding: 10px;
+	background-color: #66BB6A;
+	border-radius: 2px;
+	box-shadow: 2px 2px #000;
+	font-size: 15px;
+	transition: 1s;
+}
+.btmNovaConta{
+	color:#fff !important;
+	padding: 10px;
+	background-color: #0288d1;
+	border-radius: 2px;
+	box-shadow: 2px 2px #000;
+	font-size: 10px;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+	border-bottom: 1px solid #039be5;;
+}
+
+#imgLogin{
+	box-shadow: 4px 4px #1e88e5;
+	border-radius: 50%;
+}

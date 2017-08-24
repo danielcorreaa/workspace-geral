@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>ProjServletES</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>login.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>UsuarioController</servlet-name>
+		<servlet-class>com.servlet.controller.UsuarioController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UsuarioController</servlet-name>
+		<url-pattern>/usuario.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>com.servlet.controller.LoginController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/login.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QuartosController</servlet-name>
+		<servlet-class>com.servlet.controller.QuartosController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>QuartosController</servlet-name>
+		<url-pattern>/reserva.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LogoutController</servlet-name>
+		<servlet-class>com.servlet.controller.LogoutController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LogoutController</servlet-name>
+		<url-pattern>/logout.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>HospedagemController</servlet-name>
+		<servlet-class>com.servlet.controller.HospedagemController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HospedagemController</servlet-name>
+		<url-pattern>/hospedagem.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ValidacaoNomeController</servlet-name>
+		<servlet-class>com.servlet.controller.ValidacaoNomeController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ValidacaoNomeController</servlet-name>
+		<url-pattern>/validacao.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BuscarCepController</servlet-name>
+		<servlet-class>com.servlet.controller.BuscarCepController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BuscarCepController</servlet-name>
+		<url-pattern>/pesquisarCep.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TabelaClienteController</servlet-name>
+		<servlet-class>com.servlet.controller.TabelaClienteController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TabelaClienteController</servlet-name>
+		<url-pattern>/listaCliente.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SalvarClienteController</servlet-name>
+		<servlet-class>com.servlet.controller.SalvarClienteController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SalvarClienteController</servlet-name>
+		<url-pattern>/cliente.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RemoverClienteController</servlet-name>
+		<servlet-class>com.servlet.controller.RemoverClienteController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RemoverClienteController</servlet-name>
+		<url-pattern>/remover.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ExcluirController</servlet-name>
+		<servlet-class>com.servlet.controller.ExcluirController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ExcluirController</servlet-name>
+		<url-pattern>/excluir.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+</web-app>

@@ -1,0 +1,30 @@
+
+body{
+	margin: 0px;
+	padding: 0px;
+	font-size: 0.7em;
+	width: 100%;
+}
+#menu{	
+   
+}
+#contMenu{
+	width: 150px;
+	margin: auto;
+	position: relative;
+}
+.tabelaMargem{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.ui-button-text{
+	border-radius: 5px !important;
+}
+.ui-inputfield {
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+}
+
+#avista{display: none !important;}
+#parcelado{display: none;} 

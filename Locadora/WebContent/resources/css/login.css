@@ -1,0 +1,42 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	background: #F3F3F3;
+}
+
+#login {
+	width: 500px;
+	height: 300px;
+	margin: auto;
+	top: 100px;
+	background-color: #5122B4;
+	margin-top: 150px;
+	box-shadow: 5px 5px #708090;
+	
+}
+
+#login form {
+	position: relative; top : 100px;
+	right: -50px;
+	top: 50px;
+}
+
+#login input {
+	width: 400px;
+	height: 30px;
+	text-align: center;
+}
+@font-face {
+  font-family: 'GeosansLight';
+  src: url('GeosansLight.eot?#iefix') format('embedded-opentype'),  url('GeosansLight.woff') format('woff'), url('GeosansLight.ttf')  format('truetype'), url('GeosansLight.svg#GeosansLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.headerLogin {
+	font-family: GeosansLight, arial, sans-serif;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	width: 300px;
+	
+}
